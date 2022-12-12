@@ -1,0 +1,31 @@
+.css-levciy-MuiTablePagination-displayedRows {
+    margin: auto !important;
+}
+
+.css-pdct74-MuiTablePagination-selectLabel {
+    margin: auto !important;
+}
+
+/* Data Grid Footer */
+.css-17jjc08-MuiDataGrid-footerContainer {
+    background-color: #deebff;
+}
+
+/* Data Grid Row Selection */
+.css-1e2bxag-MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+    outline: none !important;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+._1ceqH ._1Yplu {
+    display: none !important;
+    margin: 0px 0px !important;
+}
+
+._1ceqH ._1YOWG ._eV_dK {
+    display: none !important;
+}

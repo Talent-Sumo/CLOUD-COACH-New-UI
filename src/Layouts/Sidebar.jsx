@@ -21,7 +21,7 @@ import defaultAvatar from '../assets/Images/defaultAvatar.png';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import GroupIcon from '@mui/icons-material/Group';
-import LayersIcon from '@mui/icons-material/Layers';
+import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import GradingIcon from '@mui/icons-material/Grading';
 import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 
@@ -34,11 +34,11 @@ export const drawerWidth = 240;
 const useStyles = makeStyles({
   sideBarActive: {
     backgroundColor: '#f0f0f0',
-    borderRight: '3px solid black',
-    color: 'black',
+    borderRight: '3px solid #1976d2',
+    color: '#1976d2',
   },
   sideBarActiveIcon: {
-    color: 'black'
+    color: '#1976d2'
   }
 })
 
@@ -73,14 +73,14 @@ function Sidebar({ handleDrawerToggle, mobileOpen }) {
       link: '/account/teams'
     },
     {
-      label: 'View Interaction',
-      icon: <LayersIcon />,
-      link: '/account/interaction'
+      label: 'View Responses',
+      icon: <QuestionAnswerIcon />,
+      link: '/account/view-responses'
     },
     {
       label: 'View Reports',
       icon: <GradingIcon />,
-      link: '/account/reports'
+      link: '/account/view-reports'
     }
   ]
   const drawer = (

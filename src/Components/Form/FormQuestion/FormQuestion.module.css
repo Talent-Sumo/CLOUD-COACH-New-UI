@@ -1,0 +1,18 @@
+.video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.color {
+    background-color: red !important;
+    animation: animate 1s step-start infinite;
+}
+
+@keyframes animate {
+    50% {
+        opacity: 0;
+    }
+}
