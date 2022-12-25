@@ -7,7 +7,6 @@ import {
     Badge,
     AppBar,
     Alert,
-    Avatar,
     Divider,
     Stack,
     Typography,
@@ -43,9 +42,9 @@ const circle = (
 
 const FormQuestion = () => {
     const [isActive, setIsActive] = useState(false);
-    // const [second, setSecond] = useState("00");
-    // const [minute, setMinute] = useState("00");
-    // const [counter, setCounter] = useState(0);
+    const [second, setSecond] = useState("00");
+    const [minute, setMinute] = useState("00");
+    const [counter, setCounter] = useState(0);
     const [videoNotCaptured, setVideoNotCaptured] = useState(true);
 
     const {
@@ -65,32 +64,32 @@ const FormQuestion = () => {
 
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     let intervalId;
+    useEffect(() => {
+        let intervalId;
 
-    //     if (isActive) {
-    //         intervalId = setInterval(() => {
-    //             const secondCounter = counter % 60;
-    //             const minuteCounter = Math.floor(counter / 60);
+        if (isActive) {
+            intervalId = setInterval(() => {
+                const secondCounter = counter % 60;
+                const minuteCounter = Math.floor(counter / 60);
 
-    //             let computedSecond =
-    //                 String(secondCounter).length === 1
-    //                     ? `0${secondCounter}`
-    //                     : secondCounter;
-    //             let computedMinute =
-    //                 String(minuteCounter).length === 1
-    //                     ? `0${minuteCounter}`
-    //                     : minuteCounter;
+                let computedSecond =
+                    String(secondCounter).length === 1
+                        ? `0${secondCounter}`
+                        : secondCounter;
+                let computedMinute =
+                    String(minuteCounter).length === 1
+                        ? `0${minuteCounter}`
+                        : minuteCounter;
 
-    //             setSecond(computedSecond);
-    //             setMinute(computedMinute);
+                setSecond(computedSecond);
+                setMinute(computedMinute);
 
-    //             setCounter((counter) => counter + 1);
-    //         }, 1000);
-    //     }
+                setCounter((counter) => counter + 1);
+            }, 1000);
+        }
 
-    //     return () => clearInterval(intervalId);
-    // }, [isActive, counter]);
+        return () => clearInterval(intervalId);
+    }, [isActive, counter]);
 
     const handleStartRecording = () => {
         if (!isActive) {
@@ -104,9 +103,9 @@ const FormQuestion = () => {
 
     const handleStopRecording = () => {
         stopRecording();
-        // setCounter(0);
-        // setSecond("00");
-        // setMinute("00");
+        setCounter(0);
+        setSecond("00");
+        setMinute("00");
         setIsActive(isActive);
         setVideoNotCaptured(false);
         pauseRecording();
@@ -121,11 +120,16 @@ const FormQuestion = () => {
     return (
         <>
             <AppBar position="static">
-                <Box p={2} sx={{ display: 'flex' }}>
-                    <Typography color='white' variant="h5">
-                        Live Session
-                    </Typography>
-                    <Badge color='error' className={styles.color} badgeContent="">{circle}</Badge>
+                <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+                    <Box p={2} sx={{ display: 'flex' }}>
+                        <Typography color='white' variant="h5">
+                            Live Session
+                        </Typography>
+                        <Badge color='error' className={styles.color} badgeContent="">{circle}</Badge>
+                    </Box>
+                    <Box p={1} sx={{ display: "flex", gap: "0.5rem", alignItems: "center", marginRight: "1rem", bgcolor: "white" }}>
+                        <Typography color='primary' variant="h4">00:00</Typography>
+                    </Box>
                 </Box>
             </AppBar>
             <Box p={2}>
@@ -143,7 +147,8 @@ const FormQuestion = () => {
                         <Card sx={{ backgroundColor: "#F7F8F9", marginBottom: "1rem", height: "100%" }}>
                             <CardContent>
                                 <Stack p={1} sx={{ display: "block", width: '100%' }}>
-                                    <Typography variant="h6" color='primary'>Hint : Speak about your educational background, skills, experience, etc.</Typography>
+                                    <Typography variant="h4">Hint</Typography>
+                                    <Typography variant="subtitle1">Hint Speak about your educational background, skills, experience, etc.</Typography>
                                 </Stack>
                             </CardContent>
                         </Card>
@@ -176,7 +181,8 @@ const FormQuestion = () => {
                         <Card sx={{ backgroundColor: "#F7F8F9", marginBottom: "1rem", height: "100%" }}>
                             <CardContent>
                                 <Stack p={1} sx={{ display: "block", width: '100%' }}>
-                                    <Typography variant="h6" color='primary'>Hint : Speak about your educational background, skills, experience, etc.</Typography>
+                                    <Typography variant="h4">Hint</Typography>
+                                    <Typography variant="subtitle1">Speak about your educational background, skills, experience, etc.</Typography>
                                 </Stack>
                             </CardContent>
                         </Card>
@@ -199,10 +205,10 @@ const FormQuestion = () => {
                         <CardContent>
                             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                                 <Typography variant="h4">1/4</Typography>
-                                {/* <Box sx={{ display: "flex", gap: "0.5rem" }}>
-                                        <Typography variant="subtitle1">time remaining for this question</Typography>
-                                        <Typography variant="subtitle1">{minute}:{second}</Typography>
-                                    </Box> */}
+                                <Box sx={{ display: "flex", gap: "0.5rem" }}>
+                                    <Typography variant="subtitle1">time remaining for this question</Typography>
+                                    <Typography variant="subtitle1">{minute}:{second}</Typography>
+                                </Box>
                             </Box>
 
                             <Typography mb={2} variant="h6">Tell me about yourself ?</Typography>

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import {
     Container,
-    // Paper,
     Stack,
     Box,
     Card,
@@ -22,17 +21,6 @@ import {
     Button
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
-// Icon
-import FolderIcon from '@mui/icons-material/Folder';
-
-function generate(element) {
-    return [0, 1, 2].map((value) =>
-        React.cloneElement(element, {
-            key: value,
-        }),
-    );
-}
 
 const Start = () => {
     const navigate = useNavigate();
@@ -95,7 +83,7 @@ const Start = () => {
     };
 
     const handleNext = () => {
-        navigate('/form/welcome')
+        navigate('/form/video-question')
     };
 
     const systemInstructionOptions = [
@@ -124,7 +112,7 @@ const Start = () => {
 
     return (
         <>
-            <Container maxWidth="md">
+            <Container maxWidth="lg" sx={{ marginTop: "1rem" }}>
                 <Card component={Stack} p={2} spacing={2} elevation={3} sx={{ backgroundColor: "#F7F8F9" }}>
                     <Box p={2} sx={{ backgroundColor: '#1976d2', display: 'flex', justifyContent: 'center' }}>
                         <Typography variant="h4" sx={{ color: 'white' }}>Interaction Title</Typography>
@@ -192,8 +180,16 @@ const Start = () => {
 
                         {show && (
                             <Card component={Stack} mt={2} spacing={2} elevation={3}>
-                                <Box p={1} align='center' sx={{ backgroundColor: '#1976d2' }}>
-                                    <Typography variant="h4" sx={{ color: 'white' }}>System Instruction </Typography>
+                                <Box p={2} sx={{ backgroundColor: '#1976d2' }}>
+                                    <Typography variant="h5" mb={2} sx={{ color: 'white' }}>System Instruction </Typography>
+
+                                    <Button
+                                        variant='contained'
+                                        color='warning'
+                                        onClick={() => navigate('/form/welcome')}
+                                    >
+                                        Check System
+                                    </Button>
                                 </Box>
                                 <CardContent>
                                     {systemInstructionOptions.map((item) => (
@@ -218,12 +214,9 @@ const Start = () => {
                                     aria-describedby="alert-dialog-description"
                                 >
                                     <DialogTitle id="alert-dialog-title">
-                                        Are you sure you want to start the test
+                                        Are you sure you want to start?
                                     </DialogTitle>
                                     <DialogContent>
-                                        <DialogContentText id="alert-dialog-description">
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minus in eius soluta earum repudiandae recusandae molestias, corrupti quam beatae ab laudantium architecto, molestiae ipsum vitae, eveniet ullam voluptates autem.
-                                        </DialogContentText>
                                     </DialogContent>
                                     <DialogActions>
                                         <Button variant='outlined' onClick={handleClose}>No</Button>

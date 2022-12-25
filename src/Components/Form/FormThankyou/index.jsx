@@ -129,9 +129,10 @@ const FormThankyou = (props) => {
                         <Box mb={2} sx={{ display: "flex", justifyContent: "center" }}>
                             <Button variant='contained' disabled={seconds === 0 ? false : true}>View Your Response & Answers</Button>
                         </Box>
-                        {minutes === 0 && seconds === 0
-                            ? null
-                            : <Typography color='error' variant='body2'>Available in {minutes}:{seconds < 10 ? `0${seconds}` : seconds} seconds</Typography>
+                        {
+                            minutes === 0 && seconds === 0
+                                ? null
+                                : <Typography color='error' variant='body2'>Available in {minutes}:{seconds < 10 ? `0${seconds}` : seconds} seconds</Typography>
                         }
                     </CardContent>
                 </Card>

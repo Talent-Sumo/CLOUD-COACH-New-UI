@@ -176,20 +176,6 @@ const ExternalBot = () => {
                                     </Stack>
                                     <Stack sx={{ width: '100%' }}>
                                         <FormControl>
-                                            <FormLabel id="demo-row-radio-buttons-group-label" variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Collect Resume</FormLabel>
-                                            <RadioGroup
-                                                row
-                                                aria-labelledby="demo-row-radio-buttons-group-label"
-                                                defaultValue="No"
-                                                name="row-radio-buttons-group"
-                                            >
-                                                <FormControlLabel value="No" control={<Radio />} label="No" />
-                                                <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                            </RadioGroup>
-                                        </FormControl>
-                                    </Stack>
-                                    <Stack sx={{ width: '100%' }}>
-                                        <FormControl>
                                             <FormLabel id="demo-row-radio-buttons-group-label" variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Candidate Feedback Message</FormLabel>
                                             <RadioGroup
                                                 row
@@ -210,22 +196,8 @@ const ExternalBot = () => {
                                             <FormControlLabel disabled control={<Checkbox />} label="Telegram" />
                                             <FormControlLabel disabled control={<Checkbox />} label="Whatsapp" />
                                             <FormControlLabel disabled control={<Checkbox />} label="Slack" />
-                                            <FormControlLabel control={<Checkbox defaultChecked />} label="Form" />
+                                            <FormControlLabel disabled control={<Checkbox defaultChecked />} label="Form" />
                                         </FormGroup>
-                                    </Stack>
-                                    <Stack sx={{ width: '100%' }}>
-                                        <FormControl>
-                                            <FormLabel id="demo-row-radio-buttons-group-label" variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Collect Candidate ID</FormLabel>
-                                            <RadioGroup
-                                                row
-                                                aria-labelledby="demo-row-radio-buttons-group-label"
-                                                defaultValue="No"
-                                                name="row-radio-buttons-group"
-                                            >
-                                                <FormControlLabel value="No" control={<Radio />} label="No" />
-                                                <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                            </RadioGroup>
-                                        </FormControl>
                                     </Stack>
                                 </Stack>
                             </CardContent>
@@ -326,6 +298,7 @@ const ExternalBot = () => {
                         </Grid>
                         <Box mt={3} display="flex" justifyContent="center" sx={{ gap: "0.5rem" }}>
                             <Button
+                                fullWidth
                                 disabled={
                                     errors.initiate ||
                                         errors.phoneNumberList ||
@@ -341,13 +314,6 @@ const ExternalBot = () => {
                                 onClick={handleSubmitExternalBot}
                             >
                                 Submit
-                            </Button>
-                            <Button
-                                color="warning"
-                                variant='contained'
-                                onClick={() => navigate('/account/internal-bot')}
-                            >
-                                Go to Internal Bot
                             </Button>
                         </Box>
                     </Paper>
