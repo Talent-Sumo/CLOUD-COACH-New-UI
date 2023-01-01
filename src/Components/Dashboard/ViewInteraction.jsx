@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import {
     Box,
     Typography,
@@ -8,8 +10,6 @@ import {
 import LoadAnimation from '../LoadAnimation/index';
 
 import MaterialTable from "@material-table/core";
-
-import { useNavigate } from 'react-router-dom';
 
 // import CountUp from "react-countup";
 
