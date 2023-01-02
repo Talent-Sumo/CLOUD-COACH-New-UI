@@ -9,6 +9,9 @@ import {
     Alert,
     Typography,
     TextField,
+    FormGroup,
+    FormControlLabel,
+    Checkbox,
     LinearProgress,
     InputAdornment,
     Button,
@@ -225,6 +228,12 @@ const SignUp = () => {
                                 error={Boolean(touched.invitationcode && errors.invitationcode)}
                                 helperText={touched.invitationcode && errors.invitationcode}
                             />
+                        </Stack>
+
+                        <Stack>
+                            <FormGroup>
+                                <FormControlLabel control={<Checkbox />} label="Register as a Participant" />
+                            </FormGroup>
                         </Stack>
 
                         <Stack direction='row' pb={1} pt={1}>
