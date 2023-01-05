@@ -27,12 +27,6 @@ export default function InterviewNotice() {
         //   backgroundColor: 'primary.main',
         //   opacity: [0.9, 0.8, 0.7],},
       }}>
-
-        {/* Company Logo comes here from Internal Bot */}
-
-        {/* <Box sx={{ display: 'flex', justifyContent: "center", margin: 'auto' }}>
-          <img src="" alt="logo" />
-        </Box> */}
         <Typography variant="h5" gutterBottom><strong>Talent Sumo has invited you to a One-Way video interview</strong></Typography>
         <Typography variant="subtitle1" gutterBottom>Due by: Saturday,November 5,2022 at 11:00 PM GMT+5:30</Typography>
       </Box>

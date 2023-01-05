@@ -46,6 +46,18 @@ const InterviewDetails = () => {
         }}
       >
         <CardContent>
+          {/* Company Logo comes here from Internal Bot */}
+          {/* <Box mb={2}>
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              sx={{ mt: 2, fontStyle: 'italic' }}
+            >
+              Cloud Coaching by
+            </Typography>
+            <img src={logo} alt="logo" style={{ width: "30%" }} />
+          </Box> */}
+
           <Typography
             variant="h6"
             gutterBottom
@@ -79,7 +91,7 @@ const InterviewDetails = () => {
               Launch Interaction
             </Button>
           </Box>
-          <Divider sx={{ mt: 5 }} />
+          <Divider sx={{ mt: 2 }} />
 
           {/* <Typography sx={{ mb: 5, fontStyle: 'italic' }} variant='subtitle2' gutterBottom>This interview will take approximately 12 minutes and will not start until you are completely ready.</Typography> */}
           <Typography

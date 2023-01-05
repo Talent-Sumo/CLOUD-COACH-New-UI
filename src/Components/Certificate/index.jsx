@@ -49,7 +49,7 @@ const Certificate = () => {
                             </Box>
                             <Box align='end'>
                                 <Typography variant='subtitle1' sx={{ fontStyle: "italic" }}>Powered by</Typography>
-                                <img src={brandLogo} alt="brand" style={{ width: '70%' }} />
+                                <img src={brandLogo} alt="brand" style={{ width: '70%', transform: 'translateX(6px)' }} />
                             </Box>
                         </Box>
                         <Typography color='error' mt={5} variant='body1' sx={{ fontStyle: "italic" }} align='center'>
