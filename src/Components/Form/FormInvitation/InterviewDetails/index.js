@@ -13,6 +13,8 @@ import {
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import logo from '../../../../assets/Images/coachCloud.svg';
+
 
 const InterviewDetails = () => {
 
@@ -77,16 +79,17 @@ const InterviewDetails = () => {
               Launch Interaction
             </Button>
           </Box>
+          <Divider sx={{ mt: 5 }} />
 
-          {/* <Typography sx={{ mb: 5, fontStyle: 'italic' }} variant='subtitle2' gutterBottom>This interview will take approximately 12 minutes and will not start until you are completely ready.</Typography>
+          {/* <Typography sx={{ mb: 5, fontStyle: 'italic' }} variant='subtitle2' gutterBottom>This interview will take approximately 12 minutes and will not start until you are completely ready.</Typography> */}
           <Typography
-            variant="h6"
+            variant="subtitle1"
             gutterBottom
+            sx={{ mt: 2, fontStyle: 'italic' }}
           >
-            Job Description
+            Powered by
           </Typography>
-          <Divider sx={{ mb: 3 }} />
-          <Typography>Abc</Typography> */}
+          <img src={logo} alt="cloudCoach" style={{ width: '35%', transform: 'translateX(-6px)' }} />
         </CardContent>
       </Card>
     </ThemeProvider>
