@@ -95,10 +95,10 @@ const StudentDashboard = () => {
                         <LoadAnimation />
                     ) : (
                         <MaterialTable
-                            title={<Typography variant='h5'>Student Dashboard</Typography>}
                             columns={columns}
                             data={dashboardStudentData}
                             options={{
+                                showTitle: false,
                                 actionsColumnIndex: -1,
                                 addRowPosition: "first",
                                 tableLayout: "fixed",
