@@ -125,7 +125,7 @@ const ExternalBot = () => {
                                 </Box>
                                 <Stack spacing={2} mb={3} direction={{ xs: 'column', sm: 'row', md: "row" }}>
                                     <Stack sx={{ width: '100%' }}>
-                                        <Typography variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Who can Initiate</Typography>
+                                        <Typography variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Who can initiate?</Typography>
                                         <TextField
                                             select
                                             value={initiate}
