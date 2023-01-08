@@ -172,19 +172,23 @@ const StudentDashboard = () => {
                                     <Button
                                         size='small'
                                         variant='contained'
+                                        disabled
                                         onClick={() => navigate("/basicCertificate")}
                                     >
                                         Basic
                                     </Button>
+                                    <Typography variant='subtitle2'>Download Certificate</Typography>
                                 </td>
                                 <td className={styles.td}>
                                     <Button
                                         size='small'
                                         variant='contained'
+                                        disabled
                                         onClick={() => navigate("/expertCertificate")}
                                     >
                                         Expert
                                     </Button>
+                                    <Typography variant='subtitle2'>Download Certificate</Typography>
                                 </td>
                                 <td className={styles.td} style={{ backgroundColor: "#FFF7D6" }}>
                                     <Button
@@ -194,15 +198,18 @@ const StudentDashboard = () => {
                                     >
                                         Ninja
                                     </Button>
+                                    <Typography variant='subtitle2'>Download Certificate</Typography>
                                 </td>
                                 <td className={styles.td}>
                                     <Button
                                         size='small'
                                         variant='contained'
+                                        disabled
                                         onClick={() => navigate("/extraordinaryCertificate")}
                                     >
                                         Extraordinary
                                     </Button>
+                                    <Typography variant='subtitle2'>Download Certificate</Typography>
                                 </td>
                             </tr>
                         </table>
