@@ -17,13 +17,13 @@ import { Icon } from "@iconify/react";
 
 import Chart from './Chart';
 import ViewInteraction from './ViewInteraction';
-import StudentDashboard from '../StudentDashboard';
+// import StudentDashboard from '../StudentDashboard';
 
 function Dashboard() {
     return (
         <>
             <Box>
-                {/* <Typography sx={{ display: "flex", alignItems: "center" }} variant="h5">
+                <Typography sx={{ display: "flex", alignItems: "center" }} variant="h5">
                     <Avatar variant="rounded" className={styles.avatar}>
                         <Icon
                             icon="ic:sharp-dashboard-customize"
@@ -31,9 +31,9 @@ function Dashboard() {
                         />
                     </Avatar>
                     Dashboard
-                </Typography> */}
+                </Typography>
 
-                {/* <Grid mt={2} container spacing={2}>
+                <Grid mt={2} container spacing={2}>
                     <Grid item xs={12} sm={6} md={6} lg={3}>
                         <Card className={styles.fullHeightCard} sx={{ backgroundColor: "#C1F0F5" }}>
                             <CardActionArea>
@@ -91,17 +91,17 @@ function Dashboard() {
                         </Card>
                     </Grid>
                 </Grid>
-                <Divider sx={{ mt: 3, mb: 2 }} /> */}
+                <Divider sx={{ mt: 3, mb: 2 }} />
                 {/******************** Chart ********************/}
-                {/* <Chart /> */}
+                <Chart />
 
                 {/******************** View Interaction ********************/}
-                {/* <Box mt={2}>
+                <Box mt={2}>
                     <ViewInteraction />
-                </Box> */}
+                </Box>
 
             </Box>
-            <StudentDashboard />
+            {/* <StudentDashboard /> */}
         </>
     )
 }
