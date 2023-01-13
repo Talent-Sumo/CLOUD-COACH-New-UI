@@ -556,7 +556,7 @@ const InternalBot = () => {
                                         </FormGroup>
                                     </Stack>
                                     <Stack sx={{ width: '100%' }}>
-                                        <InputLabel sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Add Insights *</InputLabel>
+                                        <InputLabel sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Coach Insights *</InputLabel>
                                         <TextField
                                             fullWidth
                                             multiline
