@@ -224,7 +224,7 @@ const FormQuestion = () => {
                             <Divider ></Divider>
                             <Box mt={2} mb={2} sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Button variant="outlined" size='small'>Back</Button>
-                                <Button onClick={() => navigate('/form/audio-question')} variant="contained" size='small'>Next</Button>
+                                <Button onClick={() => navigate('/form/feedback')} variant="contained" size='small'>Next</Button>
                             </Box>
 
                             {
