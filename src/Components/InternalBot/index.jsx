@@ -688,26 +688,40 @@ const InternalBot = () => {
                                     </div>
                                 </Box>
 
-                                <Stack spacing={2} mb={3}>
-                                    <FormControl>
-                                        <FormLabel variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Model Data</FormLabel>
-                                        <RadioGroup
-                                            row
-                                            defaultValue="No"
-                                            onClick={handleModelData}
-                                        >
-                                            <FormControlLabel value="No" control={<Radio />} label="No" />
-                                            <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                                        </RadioGroup>
-                                    </FormControl>
-                                    {
-                                        model &&
-                                        <TextField
-                                            fullWidth
-                                            size='small'
-                                            type='file'
-                                        />
-                                    }
+                                <Stack spacing={2} mb={3} direction={{ xs: 'column', sm: 'row', md: "row" }}>
+                                    <Stack sx={{ width: '100%' }}>
+                                        <FormControl>
+                                            <FormLabel variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Model Data</FormLabel>
+                                            <RadioGroup
+                                                row
+                                                defaultValue="No"
+                                                onClick={handleModelData}
+                                            >
+                                                <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                            </RadioGroup>
+                                        </FormControl>
+                                        {
+                                            model &&
+                                            <TextField
+                                                fullWidth
+                                                size='small'
+                                                type='file'
+                                            />
+                                        }
+                                    </Stack>
+                                    <Stack sx={{ width: '100%' }}>
+                                        <FormControl>
+                                            <FormLabel variant='subtitle1' sx={{ fontWeight: 'bold', fontFamily: "Public Sans,sans-serif", color: '#1976d2' }}>Training Mode</FormLabel>
+                                            <RadioGroup
+                                                row
+                                                defaultValue="No"
+                                            >
+                                                <FormControlLabel value="No" control={<Radio />} label="No" />
+                                                <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                                            </RadioGroup>
+                                        </FormControl>
+                                    </Stack>
                                 </Stack>
                             </CardContent>
                         </Card>
