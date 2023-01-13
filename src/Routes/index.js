@@ -40,6 +40,7 @@ import BasicCertificate from '../Components/BasicCertificate';
 import ExpertCertificate from '../Components/ExpertCertificate';
 import NinjaCertificate from '../Components/NinjaCertificate';
 import ExtraordinaryCertificate from '../Components/ExtraordinaryCertificate';
+import FormFeedback from '../Components/Form/FormFeedback';
 
 const Router = () => {
 
@@ -189,6 +190,10 @@ const Router = () => {
                     path: "thankyou",
                     element: <FormThankyou />
                 },
+                {
+                    path: "feedback",
+                    element: <FormFeedback />
+                }
             ]
         },
         {
