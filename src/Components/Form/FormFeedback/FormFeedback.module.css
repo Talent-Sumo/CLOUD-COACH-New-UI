@@ -1,0 +1,25 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.td,
+.th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+.th {
+    font-weight: bold;
+}
+
+.icon {
+    animation: rotate 5s infinite;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180deg);
+    }
+}
