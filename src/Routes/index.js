@@ -30,6 +30,7 @@ import FormMcq from '../Components/Form/FormMcq/index';
 import FormThankyou from '../Components/Form/FormThankyou/index';
 import ViewReport from '../Components/ViewReports';
 import SummaryReport from '../Components/Report/SummaryReport';
+import QuizReport from '../Components/Report/QuizReport';
 import DetailedReport from '../Components/Report/DetailedSummary';
 import ViewResponse from '../Components/ViewResponses/index';
 import Responses from '../Components/ViewResponses/Responses/index';
@@ -106,6 +107,10 @@ const Router = () => {
         {
             path: "/summaryReport",
             element: <SummaryReport />
+        },
+        {
+            path: "/quizReport",
+            element: <QuizReport />
         },
         {
             path: "/detailedReport",

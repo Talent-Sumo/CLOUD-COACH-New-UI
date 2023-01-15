@@ -62,6 +62,18 @@ const ViewReport = () => {
             )
         },
         {
+            title: "Quiz Report", width: "12rem",
+            render: (rowData) => (
+                <Button
+                    size='small'
+                    variant='contained'
+                    onClick={() => navigate("/quizReport")}
+                >
+                    View
+                </Button>
+            )
+        },
+        {
             title: "Certificate", width: "10rem",
             render: (rowData) => (
                 <Button

@@ -37,7 +37,7 @@ const NinjaCertificate = () => {
                             </Grid>
                             <Grid item xs={12} sm={12} md={6} lg={6} sx={{ margin: "auto" }}>
                                 <Typography variant='h5' align='end'>
-                                    Congratulations, you are awarded a business <span style={{ color: "#1976d2" }}>Ninja</span> level recognition for consistently completing 100+ workplace simulations.
+                                    Congratulations, you are awarded a business <span style={{ color: "#1976d2" }}>Ninja</span> level recognition for consistently completing workplace simulations.
                                     You can review your progress in the detailed reports
                                 </Typography>
                             </Grid>

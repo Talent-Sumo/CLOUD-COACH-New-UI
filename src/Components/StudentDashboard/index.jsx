@@ -65,6 +65,18 @@ const StudentDashboard = () => {
             )
         },
         {
+            title: "Quiz Report", width: "12rem",
+            render: (rowData) => (
+                <Button
+                    size='small'
+                    variant='contained'
+                    onClick={() => navigate("/quizReport")}
+                >
+                    View
+                </Button>
+            )
+        },
+        {
             title: "Responses", width: "8rem",
             render: (row) => (
                 <Button
@@ -127,7 +139,7 @@ const StudentDashboard = () => {
                             <CardContent>
                                 <Typography variant='h5'>Interaction Count</Typography>
                                 <Typography variant='h3'>
-                                    <CountUp end={100} />
+                                    <CountUp end={27} />
                                 </Typography>
                             </CardContent>
                         </Card>
@@ -162,10 +174,10 @@ const StudentDashboard = () => {
 
                         <table className={styles.table}>
                             <tr>
-                                <th className={styles.th}>10</th>
-                                <th className={styles.th}>50</th>
-                                <th className={styles.th} style={{ backgroundColor: "#FFF7D6" }}>100</th>
-                                <th className={styles.th}>200</th>
+                                <th className={styles.th}>1-5</th>
+                                <th className={styles.th}>6-20</th>
+                                <th className={styles.th} style={{ backgroundColor: "#FFF7D6" }}>21-50</th>
+                                <th className={styles.th}>50+</th>
                             </tr>
                             <tr>
                                 <td className={styles.td}>
